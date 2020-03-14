@@ -8,7 +8,8 @@
  */
 int main(void)
 {
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
+	int test = 0;
+    test = _printf("Character:[%c]\n", 'H');
+    printf("\nCharacter:[%d]\n", test);
     return (0);
 }

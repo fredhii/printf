@@ -16,11 +16,7 @@ typedef struct thor
 /* Prototypes */
 int _printf(const char *format, ...);
 int _strlen(char *str);
-char *p_char(Char *buffer, va_list freya);
-
-/* Dictionary */
-loki dict[] = {
-	{'c', *p_char}
-};
+char *p_char(char *buffer, va_list freya);
+loki *dictionary();
 
 #endif
