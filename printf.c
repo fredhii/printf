@@ -1,19 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
-/**
- * _printf - Prints
- * @format: Type of arguments to be printed
- * Return: Always 0.
- */
-loki *dictionary()
-{
-	loki *dict = malloc(sizeof(loki) * 1);
-
-	dict[0].type = 'c';
-	dict[0].functions = p_char;
-
-	return (dict);
-}
 /**
  * _printf - Prints
  * @format: Type of arguments to be printed
@@ -22,9 +7,9 @@ loki *dictionary()
 int _printf(const char *format, ...)
 {
 	va_list freya;
-	int i = 0, j, buffer_size;
+	int i = 0, j, buffer_size = 0;
 	char *buffer;
-	loki *dic = dictionary();
+	loki *dc = dictionary();
 
 	buffer = malloc(1024);
 	if (!buffer)
@@ -33,21 +18,30 @@ int _printf(const char *format, ...)
 
 	while (format && format[i])
 	{
-		j = 0;
-		while (dic[j].type)
+		if (format[i] == '%')
 		{
-			if (format[i - 1] == '%' && (format[i] == dic[j].type))
+			j = 0;
+			while (dc[j].type)
 			{
-				buffer = dic[j].functions(buffer, freya);
+				if (format[i + 1] == dc[j].type)
+				{
+					buffer = dc[j].functions(buffer, freya);
+					i++;
+				}
+				j++;
 			}
-			j++;
+			i++;
 		}
-		i++;
+		else
+		{
+			buffer_size = _strlen(buffer);
+			buffer[buffer_size] = format[i];
+			i++;
+		}
 	}
-	buffer_size = _strlen(buffer);
-	write(1, buffer, buffer_size);
+	print_all(buffer, buffer_size);
 	free(buffer);
-	free(dic);
+	free(dc);
 	va_end(freya);
 	return (buffer_size);
 }
