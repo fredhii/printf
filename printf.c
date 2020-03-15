@@ -20,25 +20,22 @@ int _printf(const char *format, ...)
 	va_start(freya, format);
 	for (i = 0; format && format[i]; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] != '%')
+			buffer[size++] = format[i];
+		else
 		{
-			for (j = 0; dc[j].type != '\0'; j++)
+			for (j = 0; dc[j].type; j++)
 			{
 				if (format[i + 1] == dc[j].type)
 				{
 					buffer = dc[j].fun(buffer, freya, move);
 					i++;
 				}
-				/*else if (!dc[j].type)
-				  return (free(buffer), free(dc), -1);*/
+				else if (!dc[j].type)
+					return (free(buffer), free(dc), -1);
 			}
 		}
-		else
-			buffer[size++] = format[i];
 	}
-	print_all(buffer, move);
-        free(dc);
-	free(buffer);
-	va_end(freya);
+	print_all(buffer, move), free(dc), free(buffer), va_end(freya);
 	return (size);
 }

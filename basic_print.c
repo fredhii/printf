@@ -1,9 +1,9 @@
 #include "holberton.h"
-
 /**
  * p_char - Prints
  * @buffer: Buffer to fill
  * @freya: Arguments.
+ * @move: Buffer position.
  * Return: Always 0.
  */
 char *p_char(char *buffer, va_list freya, int *move)
@@ -18,6 +18,7 @@ char *p_char(char *buffer, va_list freya, int *move)
  * p_string - Prints I am a string !
  * @buffer: Buffer to fill
  * @freya: Arguments.
+ * @move: Buffer position.
  * Return: Always 0.
  */
 char *p_string(char *buffer, va_list freya, int *move)
@@ -38,10 +39,11 @@ char *p_string(char *buffer, va_list freya, int *move)
 /**
  * p_prcnt - Prints
  * @buffer: Buffer to fill
- * @freya: Arguments.
+ * @freya: Arguments (not used).
+ * @move: Buffer position.
  * Return: Always 0.
  */
-char *p_prcnt(char *buffer, int *move)
+char *p_prcnt(char *buffer, __attribute__((unused)) va_list freya, int *move)
 {
 	buffer[*move] = '%';
 	*move += 1;
