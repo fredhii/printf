@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * _printf - Prints
  * @format: Type of arguments to be printed
@@ -7,41 +8,37 @@
 int _printf(const char *format, ...)
 {
 	va_list freya;
-	int i = 0, j, buffer_size = 0;
 	char *buffer;
+	int i, j, size = 0, *move = &size;
 	loki *dc = dictionary();
 
-	buffer = malloc(1024);
+	if (!format)
+		return (-1);
+	buffer = malloc(2048);
 	if (!buffer)
 		return (-1);
 	va_start(freya, format);
-
-	while (format && format[i])
+	for (i = 0; format && format[i]; i++)
 	{
 		if (format[i] == '%')
 		{
-			j = 0;
-			while (dc[j].type)
+			for (j = 0; dc[j].type != '\0'; j++)
 			{
 				if (format[i + 1] == dc[j].type)
 				{
-					buffer = dc[j].functions(buffer, freya);
+					buffer = dc[j].fun(buffer, freya, move);
 					i++;
 				}
-				j++;
+				/*else if (!dc[j].type)
+				  return (free(buffer), free(dc), -1);*/
 			}
-			i++;
 		}
 		else
-		{
-			buffer_size = _strlen(buffer);
-			buffer[buffer_size] = format[i];
-			i++;
-		}
+			buffer[size++] = format[i];
 	}
-	print_all(buffer, buffer_size);
+	print_all(buffer, move);
+        free(dc);
 	free(buffer);
-	free(dc);
 	va_end(freya);
-	return (buffer_size);
+	return (size);
 }

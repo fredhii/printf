@@ -10,13 +10,17 @@
 typedef struct thor
 {
 	char type;
-	char *(*functions)();
+	char *(*fun)();
 } loki;
 
-/* Prototypes */
-int _printf(const char *format, ...);
+/* Auxiliar prototypes */
 int _strlen(char *str);
-char *p_char(char *buffer, va_list freya);
+/* Main prototypes */
+char *p_char(char *buffer, va_list freya, int *move);
+char *p_string(char *buffer, va_list freya, int *move);
+char *p_prcnt(char *buffer, int *move);
+/* Prototypes */
 loki *dictionary();
-
+void print_all(char *buffer, int *move);
+int _printf(const char *format, ...);
 #endif
