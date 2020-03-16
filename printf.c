@@ -32,8 +32,11 @@ int _printf(const char *format, ...)
 					buffer = dc[j].fun(buffer, freya, move);
 					break;
 				}
-				else if (!dc[j + 1].type)
+				else if (!dc[j + 1].type && (format[i] == '\0'
+					|| format[i] == '\n'))
 					return (free(buffer), free(dc), -1);
+				else if (!dc[j + 1].type)
+					buffer[size++] = '%', i--;
 			}
 		}
 	}

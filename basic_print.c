@@ -24,8 +24,13 @@ char *p_char(char *buffer, va_list freya, int *move)
 char *p_string(char *buffer, va_list freya, int *move)
 {
 	int a = 0;
-	char *f = va_arg(freya, char*);
+	char *f;
 
+	if (va_arg(freya, char*))
+	{
+		return(buffer);
+	}
+	f = va_arg(freya, char*);
 	if (!f)
 		f = "(null)";
 	while (f[a])
@@ -35,7 +40,6 @@ char *p_string(char *buffer, va_list freya, int *move)
 	}
 	return (buffer);
 }
-
 /**
  * p_prcnt - Prints
  * @buffer: Buffer to fill
