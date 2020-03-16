@@ -20,6 +20,7 @@ typedef struct thor
 } loki;
 
 /* Auxiliar prototypes */
+char *hand_buff();
 int _strlen(char *str);
 char *_itoa(int num, int base);
 void _reverse(char *str);

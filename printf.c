@@ -14,9 +14,7 @@ int _printf(const char *format, ...)
 
 	if (!format)
 		return (-1);
-	buffer = malloc(2048);
-	if (!buffer)
-		return (-1);
+	buffer = hand_buff();
 	va_start(freya, format);
 	for (i = 0; format && format[i]; i++)
 	{
