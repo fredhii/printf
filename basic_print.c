@@ -26,10 +26,6 @@ char *p_string(char *buffer, va_list freya, int *move)
 	int a = 0;
 	char *f;
 
-	if (va_arg(freya, char*))
-	{
-		return(buffer);
-	}
 	f = va_arg(freya, char*);
 	if (!f)
 		f = "(null)";
