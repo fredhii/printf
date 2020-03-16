@@ -50,3 +50,51 @@ char *p_prcnt(char *buffer, __attribute__((unused)) va_list freya, int *move)
 
 	return (buffer);
 }
+
+/**
+ * p_doub - Prints
+ * @buffer: Buffer to fill
+ * @freya: Arguments (not used).
+ * @move: Buffer position.
+ * Return: Always 0.
+ */
+char *p_doub(char *buffer, va_list freya, int *move)
+{
+	int num = va_arg(freya, int), i;
+	char *a = _itoa(num, 10);
+
+	if (a == NULL)
+		return (NULL);
+	for (i = 0; a[i]; i++)
+	{
+		buffer[*move] = a[i];
+		*move += 1;
+	}
+	free(a);
+
+	return (buffer);
+}
+
+/**
+ * p_int - Prints
+ * @buffer: Buffer to fill
+ * @freya: Arguments (not used).
+ * @move: Buffer position.
+ * Return: Always 0.
+ */
+char *p_int(char *buffer, va_list freya, int *move)
+{
+	int num = va_arg(freya, int), i;
+	char *a = _itoa(num, 10);
+
+	if (a == NULL)
+		return (NULL);
+	for (i = 0; a[i]; i++)
+	{
+		buffer[*move] = a[i];
+		*move += 1;
+	}
+	free(a);
+
+	return (buffer);
+}

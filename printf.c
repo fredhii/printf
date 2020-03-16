@@ -24,14 +24,15 @@ int _printf(const char *format, ...)
 			buffer[size++] = format[i];
 		else
 		{
+			i++;
 			for (j = 0; dc[j].type; j++)
 			{
-				if (format[i + 1] == dc[j].type)
+				if (format[i] == dc[j].type)
 				{
 					buffer = dc[j].fun(buffer, freya, move);
-					i++;
+					break;
 				}
-				else if (!dc[j].type)
+				else if (!dc[j + 1].type)
 					return (free(buffer), free(dc), -1);
 			}
 		}
