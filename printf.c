@@ -22,8 +22,6 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
-			if (format[i] == '\0')
-				break;
 			for (j = 0; dc[j].type; j++)
 			{
 				if (format[i] == dc[j].type)
