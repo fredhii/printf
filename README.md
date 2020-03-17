@@ -43,5 +43,5 @@
 - [ ] All above options should work well together.
 
 ## Authors
-[@AlisonQuinter17](https://github.com/AlisonQuinter17)
-[@Fredhii](https://github.com/fredhii)
+[Alison Quintero](https://github.com/AlisonQuinter17) <xxx@hotmail.com>
+[Fredy Acuña](https://github.com/fredhii) <fredhiixd@gmail.com>
