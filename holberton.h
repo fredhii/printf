@@ -20,8 +20,6 @@ typedef struct thor
 } loki;
 
 /* Auxiliar prototypes */
-char *hand_buff();
-int _strlen(char *str);
 char *_itoa(long int num, int base);
 void _reverse(char *str);
 /* Main prototypes */
@@ -30,10 +28,8 @@ void p_string(char *buffer, va_list freya, int *move);
 void p_prcnt(char *buffer, va_list freya, int *move);
 void p_doub(char *buffer, va_list freya, int *move);
 void p_int(char *buffer, va_list freya, int *move);
-
 /* Prototypes */
 loki *dictionary();
-void print_all(char *buffer, int *move);
 int _printf(const char *format, ...);
 
 #endif

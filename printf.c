@@ -8,7 +8,7 @@
 int _printf(const char *format, ...)
 {
 	int i, j, size = 0, *move = &size;
-	char *buffer = hand_buff();
+	char *buffer = malloc(2048);
 	loki *dc = dictionary();
 	va_list freya;
 
@@ -38,6 +38,6 @@ int _printf(const char *format, ...)
 		}
 	}
 	buffer[*move] = '\0';
-	print_all(buffer, move);
-	return (va_end(freya), free(dc), free(buffer), size);
+        write(1, buffer, *move);
+	return (va_end(freya), free(dc), free(buffer), *move);
 }

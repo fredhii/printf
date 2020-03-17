@@ -13,16 +13,6 @@ int _strlen(char *str)
 	return (size);
 }
 /**
- * print_all - produces output according to a format.
- * @buffer: Array t print.
- * @move: Buffer size
- **/
-void print_all(char *buffer, int *move)
-{
-	write(1, buffer, *move);
-}
-
-/**
  * _reverse - reverse the string.
  * @str: character.
  **/
