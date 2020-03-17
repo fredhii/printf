@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i] == dc[j].type)
 				{
-					buffer = dc[j].fun(buffer, freya, move);
+					dc[j].fun(buffer, freya, move);
 					break;
 				}
 				else if (!dc[j + 1].type && (format[i] == '\0'

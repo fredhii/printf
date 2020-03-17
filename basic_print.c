@@ -4,14 +4,12 @@
  * @buffer: Buffer to fill
  * @freya: Arguments.
  * @move: Buffer position.
- * Return: Always 0.
+ * Return: none.
  */
-char *p_char(char *buffer, va_list freya, int *move)
+void p_char(char *buffer, va_list freya, int *move)
 {
 	buffer[*move] = (char)va_arg(freya, int);
 	*move += 1;
-
-	return (buffer);
 }
 
 /**
@@ -19,9 +17,9 @@ char *p_char(char *buffer, va_list freya, int *move)
  * @buffer: Buffer to fill
  * @freya: Arguments.
  * @move: Buffer position.
- * Return: Always 0.
+ * Return: none.
  */
-char *p_string(char *buffer, va_list freya, int *move)
+void p_string(char *buffer, va_list freya, int *move)
 {
 	int a = 0;
 	char *f;
@@ -34,67 +32,60 @@ char *p_string(char *buffer, va_list freya, int *move)
 		buffer[*move] = f[a];
 		*move += 1, a++;
 	}
-	return (buffer);
 }
 /**
  * p_prcnt - Prints
  * @buffer: Buffer to fill
  * @freya: Arguments (not used).
  * @move: Buffer position.
- * Return: Always 0.
+ * Return: none.
  */
-char *p_prcnt(char *buffer, __attribute__((unused)) va_list freya, int *move)
+void p_prcnt(char *buffer, __attribute__((unused)) va_list freya, int *move)
 {
 	buffer[*move] = '%';
 	*move += 1;
-
-	return (buffer);
 }
 
 /**
  * p_doub - Prints
  * @buffer: Buffer to fill
- * @freya: Arguments (not used).
+ * @freya: Arguments.
  * @move: Buffer position.
- * Return: Always 0.
+ * Return: none.
  */
-char *p_doub(char *buffer, va_list freya, int *move)
+void p_doub(char *buffer, va_list freya, int *move)
 {
 	int num = va_arg(freya, int), i;
 	char *a = _itoa(num, 10);
 
 	if (a == NULL)
-		return (NULL);
+		return;
 	for (i = 0; a[i]; i++)
 	{
 		buffer[*move] = a[i];
 		*move += 1;
 	}
 	free(a);
-
-	return (buffer);
 }
 
 /**
  * p_int - Prints
  * @buffer: Buffer to fill
- * @freya: Arguments (not used).
+ * @freya: Arguments.
  * @move: Buffer position.
- * Return: Always 0.
+ * Return: none.
  */
-char *p_int(char *buffer, va_list freya, int *move)
+void p_int(char *buffer, va_list freya, int *move)
 {
 	int num = va_arg(freya, int), i;
 	char *a = _itoa(num, 10);
 
 	if (a == NULL)
-		return (NULL);
+		return;
 	for (i = 0; a[i]; i++)
 	{
 		buffer[*move] = a[i];
 		*move += 1;
 	}
 	free(a);
-
-	return (buffer);
 }

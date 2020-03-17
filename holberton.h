@@ -16,7 +16,7 @@
 typedef struct thor
 {
 	char type;
-	char *(*fun)();
+	void (*fun)();
 } loki;
 
 /* Auxiliar prototypes */
@@ -25,11 +25,11 @@ int _strlen(char *str);
 char *_itoa(int num, int base);
 void _reverse(char *str);
 /* Main prototypes */
-char *p_char(char *buffer, va_list freya, int *move);
-char *p_string(char *buffer, va_list freya, int *move);
-char *p_prcnt(char *buffer, va_list freya, int *move);
-char *p_doub(char *buffer, va_list freya, int *move);
-char *p_int(char *buffer, va_list freya, int *move);
+void p_char(char *buffer, va_list freya, int *move);
+void p_string(char *buffer, va_list freya, int *move);
+void p_prcnt(char *buffer, va_list freya, int *move);
+void p_doub(char *buffer, va_list freya, int *move);
+void p_int(char *buffer, va_list freya, int *move);
 
 /* Prototypes */
 loki *dictionary();

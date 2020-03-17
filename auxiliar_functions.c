@@ -66,7 +66,7 @@ char *_itoa(int num, int base)
 	if (num < 0 && base == 10)
 	{
 		isNeg = 1;
-		num = -num;
+		num *= -1;
 	}
 	while (num != 0)
 	{
