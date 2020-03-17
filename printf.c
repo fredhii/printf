@@ -7,15 +7,14 @@
  */
 int _printf(const char *format, ...)
 {
-	va_list freya;
-	char *buffer;
 	int i, j, size = 0, *move = &size;
+	char *buffer = hand_buff();
 	loki *dc = dictionary();
+	va_list freya;
 
-	if (!format)
-		return (-1);
-	buffer = hand_buff();
 	va_start(freya, format);
+	if (!buffer || !dc || !format)
+		return (free(buffer), free(dc), -1);
 	for (i = 0; format && format[i]; i++)
 	{
 		if (format[i] != '%')
@@ -23,7 +22,9 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
-			for (j = 0; dc[j].type; j++)
+			if (format[i] == '\0')
+				break;
+			for (j = 0; dc[j].type && format[i]; j++)
 			{
 				if (format[i] == dc[j].type)
 				{
@@ -38,6 +39,6 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
-	print_all(buffer, move), free(dc), free(buffer), va_end(freya);
-	return (size);
+	print_all(buffer, move);
+	return (va_end(freya), free(dc), free(buffer), size);
 }
