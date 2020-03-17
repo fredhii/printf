@@ -22,7 +22,7 @@ typedef struct thor
 /* Auxiliar prototypes */
 char *hand_buff();
 int _strlen(char *str);
-char *_itoa(int num, int base);
+char *_itoa(long int num, int base);
 void _reverse(char *str);
 /* Main prototypes */
 void p_char(char *buffer, va_list freya, int *move);

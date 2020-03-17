@@ -48,9 +48,9 @@ void _reverse(char *str)
  * @base: Base format
  * Return: pointer to new string
  **/
-char *_itoa(int num, int base)
+char *_itoa(long int num, int base)
 {
-	int i = 0, isNeg = 0;
+	long int i = 0, isNeg = 0;
 	char *str;
 
 	str = malloc(100);

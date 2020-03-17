@@ -55,7 +55,7 @@ void p_prcnt(char *buffer, __attribute__((unused)) va_list freya, int *move)
  */
 void p_doub(char *buffer, va_list freya, int *move)
 {
-	int num = va_arg(freya, int), i;
+	long int num = va_arg(freya, int), i;
 	char *a = _itoa(num, 10);
 
 	if (a == NULL)
@@ -77,7 +77,7 @@ void p_doub(char *buffer, va_list freya, int *move)
  */
 void p_int(char *buffer, va_list freya, int *move)
 {
-	int num = va_arg(freya, int), i;
+	long int num = va_arg(freya, int), i;
 	char *a = _itoa(num, 10);
 
 	if (a == NULL)
