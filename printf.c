@@ -38,6 +38,6 @@ int _printf(const char *format, ...)
 		}
 	}
 	buffer[*move] = '\0';
-        write(1, buffer, *move);
+	write(1, buffer, *move);
 	return (va_end(freya), free(dc), free(buffer), *move);
 }

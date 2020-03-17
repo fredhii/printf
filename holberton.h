@@ -29,7 +29,7 @@ void p_prcnt(char *buffer, va_list freya, int *move);
 void p_doub(char *buffer, va_list freya, int *move);
 void p_int(char *buffer, va_list freya, int *move);
 /* Prototypes */
-loki *dictionary();
 int _printf(const char *format, ...);
+loki *dictionary();
 
 #endif

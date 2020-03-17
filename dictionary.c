@@ -7,6 +7,8 @@ loki *dictionary()
 {
 	loki *dict = malloc(sizeof(loki) * 6);
 
+	if (!dict)
+		return (NULL);
 	dict[0].type = 'c';
 	dict[0].fun = p_char;
 	dict[1].type = 's';
