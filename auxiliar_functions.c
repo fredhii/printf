@@ -19,7 +19,6 @@ int _strlen(char *str)
  **/
 void print_all(char *buffer, int *move)
 {
-	buffer[*move] = '\0';
 	write(1, buffer, *move);
 }
 

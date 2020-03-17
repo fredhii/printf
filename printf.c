@@ -37,6 +37,7 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
+	buffer[*move] = '\0';
 	print_all(buffer, move);
 	return (va_end(freya), free(dc), free(buffer), size);
 }
