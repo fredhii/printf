@@ -43,6 +43,6 @@
 - [ ] All above options should work well together.
 
 ## Authors
-[Alison Quintero](https://github.com/AlisonQuinter17) <xxx@hotmail.com>
+[Alison Quintero](https://github.com/AlisonQuinter17) <alisondanellaquintero@hotmail.com>
 
 [Fredy Acuña](https://github.com/fredhii) <fredhiixd@gmail.com>
