@@ -1,0 +1,81 @@
+.TH "17/3/20"
+.Dt Printf 0      \" Program name and manual section number
+.Sh NAME                 \" Section Header - required - don't modify
+.Nm _printf
+.Nd formatted output conversion.
+.Sh SYNOPSIS             \" Section Header - required - don't modify
+.Nm #include "holberton.h"
+.Pp
+
+.B int _printf(const char *format, ...);
+.Pp
+
+.B void p_char(char *buffer, va_list freya, int *move);
+.Pp
+.B void p_string(char *buffer, va_list freya, int *move);
+.Pp
+.B void p_prcnt(char *buffer, va_list freya, int *move);
+.Pp
+.B void p_doub(char *buffer, va_list freya, int *move);
+.Pp
+.B void p_int(char *buffer, va_list freya, int *move);
+.Pp
+
+.Sh DESCRIPTION 
+.Pp
+
+.Pp
+
+.Sh RETURN VALUE
+Upon successful return, these functions return the number of characters printed (excluding
+the null byte used to end output to strings).
+.Pp
+
+.Sh FORMAT
+The format string is a character string, beginning and ending in its initial shift state,
+if any. The format string is composed of zero or more directives: ordinary characters 
+(not %), which are copied unchanged to the output stream; and conversion specifications,
+each of which results in fetching zero or more subsequent arguments. 
+.Pp
+
+.Sh EXAMPLES
+.Nm With main.c we can test our functions:
+.Pp
+
+#include "holberton.h"
+
+
+.Pp
+_printf("decimal %d\n", 10000);
+.Pp
+Output: decimal 10000
+.Pp
+
+_printf("char %c\n", 'A');
+.Pp
+Output: char A
+.Pp
+
+_printf("string %s\n", "Hi my friend !");
+.Pp
+Output: string Hi my friend !
+.Pp
+
+_printf("integrer %i\n", 88);
+.Pp
+Output: integrer 88
+.Pp
+
+_printf("octal %o\n", 92);
+.Pp
+Output: octal 134
+.Pp
+
+.Sh SEE ALSO
+
+.Sh AUTHORS
+.B Made by:
+.Pp
+Alison Quintero
+.Pp
+Fredy Acuna
