@@ -55,7 +55,7 @@ void p_rot13(char *buffer, va_list freya, int *move)
 				*move += 1;
 				break;
 			}
-			else
+			if (!dict[j + 1])
 			{
 				buffer[*move] = f[i];
 				*move += 1;
