@@ -1,5 +1,5 @@
-.TH man(0) "17/3/2020" Version "0.1" "_PRINTF MAN PAGE"
-.DT Printf (0) 
+.TH _printf "17/3/2020" Version "0.1" "_PRINTF MAN PAGE"
+.DT _printf (0) 
 .SH NAME
 .NM _printf
 .ND formatted output conversion.
@@ -26,7 +26,6 @@
 .PP
 
 .SH Others prototypes
-.PP
 .PP
 
 .BR void p_binary(char *buffer, va_list freya, int *move);
