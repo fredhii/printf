@@ -1,81 +1,85 @@
 .TH "17/3/20"
-.Dt Printf 0      \" Program name and manual section number
-.Sh NAME                 \" Section Header - required - don't modify
-.Nm _printf
-.Nd formatted output conversion.
-.Sh SYNOPSIS             \" Section Header - required - don't modify
-.Nm #include "holberton.h"
-.Pp
+.DT Printf (0)
+.SH NAME
+.NM _printf
+.ND formatted output conversion.
+.SH SYNOPSIS
+.NM #include "holberton.h"
+.PP
 
 .B int _printf(const char *format, ...);
-.Pp
+.PP
 
 .B void p_char(char *buffer, va_list freya, int *move);
-.Pp
+.PP
+
 .B void p_string(char *buffer, va_list freya, int *move);
-.Pp
+.PP
+
 .B void p_prcnt(char *buffer, va_list freya, int *move);
-.Pp
+.PP
+
 .B void p_doub(char *buffer, va_list freya, int *move);
-.Pp
+.PP
+
 .B void p_int(char *buffer, va_list freya, int *move);
-.Pp
+.PP
 
-.Sh DESCRIPTION 
-.Pp
+.SH DESCRIPTION 
+.PP
 
-.Pp
+.PP
 
-.Sh RETURN VALUE
+.SH RETURN VALUE
 Upon successful return, these functions return the number of characters printed (excluding
 the null byte used to end output to strings).
-.Pp
+.PP
 
-.Sh FORMAT
+.SH FORMAT
 The format string is a character string, beginning and ending in its initial shift state,
 if any. The format string is composed of zero or more directives: ordinary characters 
 (not %), which are copied unchanged to the output stream; and conversion specifications,
 each of which results in fetching zero or more subsequent arguments. 
-.Pp
+.PP
 
-.Sh EXAMPLES
+.SH EXAMPLES
 .Nm With main.c we can test our functions:
-.Pp
+.PP
 
 #include "holberton.h"
 
 
-.Pp
+.PP
 _printf("decimal %d\n", 10000);
-.Pp
+.PP
 Output: decimal 10000
-.Pp
+.PP
 
 _printf("char %c\n", 'A');
-.Pp
+.PP
 Output: char A
-.Pp
+.PP
 
 _printf("string %s\n", "Hi my friend !");
-.Pp
+.PP
 Output: string Hi my friend !
-.Pp
+.PP
 
 _printf("integrer %i\n", 88);
-.Pp
+.PP
 Output: integrer 88
-.Pp
+.PP
 
 _printf("octal %o\n", 92);
-.Pp
+.PP
 Output: octal 134
-.Pp
+.PP
 
-.Sh SEE ALSO
+.SH SEE ALSO
 
-.Sh AUTHORS
+.SH AUTHORS
 .B Made by:
-.Pp
+.PP
 Alison Quintero
-.Pp
+.PP
 Fredy Acuna
