@@ -77,7 +77,9 @@ _printf("octal %o\n", 92);
 Output: octal 134
 .PP
 .PP
-.SH SEE ALSO
+
+.SH BUGS
+Unknown
 .PP
 .SH AUTHORS
 .B Made by:
