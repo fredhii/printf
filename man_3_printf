@@ -25,6 +25,30 @@
 .BR void p_int(char *buffer, va_list freya, int *move);
 .PP
 
+.NM Others prototypes
+.PP
+
+.BR void p_binary(char *buffer, va_list freya, int *move);
+.PP
+
+.BR void p_un_int(char *buffer, va_list freya, int *move);
+.PP
+
+.BR void p_hex(char *buffer, va_list freya, int *move);
+.PP
+
+.BR void p_hex2(char *buffer, va_list freya, int *move);
+.PP
+
+.BR void p_rev(char *buffer, va_list freya, int *move);
+.PP
+
+.BR void p_rot13(char *buffer, va_list freya, int *move);
+.PP
+
+.BR void p_address(char *buffer, va_list freya, int *move);
+.PP
+
 .SH DESCRIPTION 
 .PP
 The _printf() function is used to print the “character, string, float, integer, octal and 
