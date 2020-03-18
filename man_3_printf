@@ -27,8 +27,9 @@
 
 .SH DESCRIPTION 
 .PP
-The _printf() function is used to print the “character, string, float, integer, octal and hexadecimal values” onto the output screen. The functions in the _printf() family produce output according to a format as described below.
-
+The _printf() function is used to print the “character, string, float, integer, octal and 
+hexadecimal values” onto the output screen. The functions in the _printf() family produce
+ output according to a format as described below.
 
 .PP
 
