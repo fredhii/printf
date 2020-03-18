@@ -25,7 +25,8 @@
 .BR void p_int(char *buffer, va_list freya, int *move);
 .PP
 
-.NM Others prototypes
+.SH Others prototypes
+.PP
 .PP
 
 .BR void p_binary(char *buffer, va_list freya, int *move);
@@ -109,6 +110,7 @@ Unknown
 .SH AUTHORS
 .B Made by:
 .PP
-Alison Quintero
+- Alison Quintero
 .PP
-Fredy Acuna
+- Fredy Acuna
+
