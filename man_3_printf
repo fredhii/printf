@@ -1,5 +1,5 @@
-.TH "17/3/20"
-.DT Printf (0)
+.TH man(0) "17/3/2020" Version "0.1" "_PRINTF MAN PAGE"
+.DT Printf (0) 
 .SH NAME
 .NM _printf
 .ND formatted output conversion.
@@ -7,22 +7,22 @@
 .NM #include "holberton.h"
 .PP
 
-.B int _printf(const char *format, ...);
+.BR int _printf(const char *format, ...);
 .PP
 
-.B void p_char(char *buffer, va_list freya, int *move);
+.BR void p_char(char *buffer, va_list freya, int *move);
 .PP
 
-.B void p_string(char *buffer, va_list freya, int *move);
+.BR void p_string(char *buffer, va_list freya, int *move);
 .PP
 
-.B void p_prcnt(char *buffer, va_list freya, int *move);
+.BR void p_prcnt(char *buffer, va_list freya, int *move);
 .PP
 
-.B void p_doub(char *buffer, va_list freya, int *move);
+.BR void p_doub(char *buffer, va_list freya, int *move);
 .PP
 
-.B void p_int(char *buffer, va_list freya, int *move);
+.BR void p_int(char *buffer, va_list freya, int *move);
 .PP
 
 .SH DESCRIPTION 
@@ -48,35 +48,35 @@ each of which results in fetching zero or more subsequent arguments.
 
 #include "holberton.h"
 
-
+.PP
 .PP
 _printf("decimal %d\n", 10000);
 .PP
 Output: decimal 10000
 .PP
-
+.PP
 _printf("char %c\n", 'A');
 .PP
 Output: char A
 .PP
-
+.PP
 _printf("string %s\n", "Hi my friend !");
 .PP
 Output: string Hi my friend !
 .PP
-
+.PP
 _printf("integrer %i\n", 88);
 .PP
 Output: integrer 88
 .PP
-
+.PP
 _printf("octal %o\n", 92);
 .PP
 Output: octal 134
 .PP
-
+.PP
 .SH SEE ALSO
-
+.PP
 .SH AUTHORS
 .B Made by:
 .PP
